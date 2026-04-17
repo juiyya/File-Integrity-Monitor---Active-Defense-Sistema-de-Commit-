@@ -11,6 +11,8 @@ Um sistema de EDR (Endpoint Detection and Response) com arquitetura orientada a 
 
 ## Como Simular um Ataque
 
+  * Em um terminal, rode a API: `node server.js`
+  * Em outro terminal, rode o agente: `python monitor.py`
 1. Vá até a pasta `monitored` e tente alterar o arquivo de teste.
 2. **O que acontece:** O sistema bloqueia a ação, manda a alteração para a quarentena e restaura o arquivo original.
 3. Olhe os terminais do servidor e do monitor: você verá o alerta do ataque bloqueado, que também foi salvo no SQL.
