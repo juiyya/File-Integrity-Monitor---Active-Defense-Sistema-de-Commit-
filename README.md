@@ -9,6 +9,12 @@ Um sistema de EDR (Endpoint Detection and Response) com arquitetura orientada a 
 * **Aprovação Criptográfica:** Nenhuma alteração passa sem um token JWT de um administrador.
 * **Trilha de Auditoria:** Registra todas as tentativas (bloqueadas ou aprovadas) no PostgreSQL.
 
+## Como Simular um Ataque
+
+1. Vá até a pasta `monitored` e tente alterar o arquivo de teste.
+2. **O que acontece:** O sistema bloqueia a ação, manda a alteração para a quarentena e restaura o arquivo original.
+3. Olhe os terminais do servidor e do monitor: você verá o alerta do ataque bloqueado, que também foi salvo no SQL.
+
 ## Tecnologias e Arquitetura
 
 * **Agente Local:** Python (Watchdog para monitorar I/O, Flask para escutar comandos).
@@ -28,11 +34,6 @@ Um sistema de EDR (Endpoint Detection and Response) com arquitetura orientada a 
    * Em um terminal, rode a API: `node server.js`
    * Em outro terminal, rode o agente: `python monitor.py`
 
-## Como Simular um Ataque
-
-1. Vá até a pasta `monitored` e tente alterar o arquivo de teste.
-2. **O que acontece:** O sistema bloqueia a ação, manda a alteração para a quarentena e restaura o arquivo original.
-3. Olhe os terminais do servidor e do monitor: você verá o alerta do ataque bloqueado, que também foi salvo no SQL.
 
 ## Como Aprovar a Alteração (Admin)
 
