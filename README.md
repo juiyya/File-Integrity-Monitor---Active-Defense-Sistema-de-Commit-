@@ -1,6 +1,6 @@
-# File Integrity Monitor - Active Defense
+# File Monitor - Active Defense
 
-Um sistema de EDR (Endpoint Detection and Response) com arquitetura orientada a eventos. Ele monitora arquivos críticos e, se detectar alterações não autorizadas, faz o rollback automático, isola a ameaça em quarentena e exige a aprovação de um administrador para validar a modificação.
+Um sistema de EDR Endpoint Detection and Response. Ele monitora arquivos, se detectar alterações não autorizadas, faz o rollback automático, isola a ameaça em quarentena e exige a aprovação de um administrador para validar a modificação.
 
 ## Funcionalidades
 
